@@ -14,6 +14,8 @@ class Dissertation_Manager extends MY_Controller {
     $this->load->model ('Teacher_Model');
     $this->load->model ('DissertationDetail_Model');
     $this->load->model ('Schoolyear_Model');
+    $this->load->model ('DissertationType_Model');
+
 
  if ($this->session->userdata('admin_data')== null) {
       
@@ -28,11 +30,12 @@ class Dissertation_Manager extends MY_Controller {
 
   public function index (){
     $datas = $this->Dissertation_Model->get_list();
+    $Diss_type = $this->DissertationType_Model->get_list();
 
     $variables = array('datas'=>$datas);       
     $content = "admin/dissertation_manager/dissertation";   
 
-    $data = array ('content'=>$content,'variable'=>$variables);     
+    $data = array ('content'=>$content,'variable'=>$variables,'diss_type'=>$Diss_type);     
 
     $this->load->view ('admin/pages/index',$data);
 
@@ -245,26 +248,11 @@ public function edit_dissertation (){
    $student_arr[] = $student;
  }
 
- 
-
-
-
-
-
-
   $content = "admin/dissertation_manager/edit_dissertation";
 
 
 
  $data = array ('content'=>$content,'variable'=>$dissertation,'school_year'=>$school_year,'teacher_list'=>$teacher_arr,'student_list'=>$student_arr);
-
-
-   
- 
-
-
-
- 
 
 
 
@@ -360,17 +348,17 @@ public function delete_dissertation () {
 
 
 public function add_dissertation () {
-  $school_year = $this->Schoolyear_Model->get_list();
+    $school_year = $this->Schoolyear_Model->get_list();
 
 
-  $variables = array();       
+    $variables = array();       
 
-  $content = "admin/dissertation_manager/add_dissertation";
+    $content = "admin/dissertation_manager/add_dissertation";
 
-  $data = array ('content'=>$content,'school_year'=>$school_year);      
+    $data = array ('content'=>$content,'school_year'=>$school_year);      
 
 
-  return $this->load->view ('admin/pages/index',$data);
+    return $this->load->view ('admin/pages/index',$data);
 
 }
 

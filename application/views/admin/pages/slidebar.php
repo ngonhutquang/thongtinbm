@@ -35,6 +35,20 @@
                     <i class="pe-7s-note2"></i>
                     <p>LUẬN VĂN, TIỂU LUẬN</p>
                 </a>
+            </li>  
+
+            <li>
+                <a  class="none_sub hl-menu job" href="<?php echo base_url();?>admin/dissertation-type">
+                    <i class="pe-7s-note2"></i>
+                    <p>DANH MỤC</p>
+                </a>
+            </li> 
+
+            <li>
+                <a  class="none_sub hl-menu job" href="<?php echo base_url();?>admin/dissertation-manager">
+                    <i class="pe-7s-note2"></i>
+                    <p>NĂM HỌC</p>
+                </a>
             </li> 
 
              <li>

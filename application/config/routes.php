@@ -59,32 +59,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['(admin)/(student-manager)']='admin/Student_Manager';
 $route['(admin)/(teacher-manager)']='admin/Teacher_Manager';
 $route['(admin)/(dissertation-manager)']='admin/Dissertation_Manager';
+$route['(admin)/(dissertation-type)']='admin/Dissertation_Type';
 $route['(admin)/(news)']='admin/News';
 
 
-$route['(about)']='Client/about';
-$route['(submit-resume)']='Client/submit_resume';
-$route['(job-search)']='Client/job_search';
-$route['(submit-vacancy)']='Client/submit_vacancy';
-$route['(refer-a-friend)']='Client/refer_a_friend';
-$route['(news)']='Client/news';
-$route['(connect)']='Client/connect';
-$route['(candidates)']='Client/candidates';
-$route['(do-add-job)']='Client/do_add_job';
-$route['(do-add-cv)']='Client/do_add_cv';
-$route['(add-job-alert)']='Client/add_job_alert';
-$route['(why-us)']='Client/why_us';
-$route['(services)']='Client/services';
-$route['(our-clients-think)']='Client/our_clients_think';
-$route['(site-map)']='Client/site_map';
-$route['(contact-us)']='Client/connect';
-$route['(privacy-policy)']='Client/privacy_policy';
-$route['(terms-of-use)']='Client/terms_of_use';
-$route['(do-add-cv)']='Client/do_add_cv';
-$route['(do-add-job)']='Client/do_add_job';
-$route['(thank-you)']='Client/success_page';
-$route['(view-all-job)']='Client/view_all_jobs';
-$route['(create-job-alert)']='Client/create_job_alert';
 
 $route['(gioithieu)']='Client/introduce';
 $route['(gioi-thieu)']='Client/introduce';

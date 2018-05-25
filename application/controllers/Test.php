@@ -21,6 +21,50 @@ public function index () {
 
 
 
+
+  public function Test_HTML () {
+  	/*$html = <<<EOD       
+  	<div class="form-group">
+    <label for="name"></span>Tên đề tài</label> 
+
+    <input type="text" class="form-control" id="dissertation_title"  name="title"  value=""  placeholder="Enter Dissertation Name">            
+   
+  </div>
+
+  <div class="form-group">
+    <label for="name"></span>Loại</label> 
+    <select name="type" id="type">
+      <option value="1">Luận văn</option>
+      <option value="2">Tiểu luận</option>
+    </select> 
+  </div>
+EOD;*/
+$a = 1;
+$b=2;
+$arr = array ('name'=>'long','age'=>'12');
+echo  <<<html
+
+<div class="form-group">
+    <label for="name"></span> Tên đề tài</label> 
+
+    <input type="text" class="form-control" id="dissertation_title"  name="title"  value=""  placeholder="Enter Dissertation Name">            
+   
+  </div>
+
+  <div class="form-group">
+    <label for="name"></span>Loại</label> 
+    <select name="type" id="type">
+      <option value="1">Luận văn</option>
+      <option value="2">Tiểu luận</option>
+    </select> 
+  </div>
+ 
+html;
+ 
+  }
+
+
+
 }
 
 ?>

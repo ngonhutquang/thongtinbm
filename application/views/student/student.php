@@ -40,8 +40,10 @@
                </div>
                <div class="form-group">
                   <label for="name"></span>Name:</label>           
-                  <div> <span id="view_name"> <?php echo $student->name ?></span> </div>       
+                  <div> <span id="view_name"> <?php echo $student->name ?></span> </div>  
+
                </div>  <div class="form-group">
+
                   <label for="name"></span>Khóa:</label>           
                   <div> <span id="view_name"> <?php echo $student->course ?></span> </div>       
                </div>
@@ -79,9 +81,25 @@
                             
                           </ul>
                         </div>
+
+
+                          <div class="form-group">
+
+                  <label for="name"></span>Năm học:</label>           
+                  <div> <span id="view_name"> <?php echo $dissertation->school_year ?></span> </div>       
+               </div>
+
                   </div>
               
-                <div class="col-md-12">
+
+
+
+
+       <div class="col-md-12">
+
+
+             
+
                   
    <form name='add_master_category' action='<?php echo base_url();?>Student/upload_dissertation' id="add_form" method='POST'  enctype="multipart/form-data" >   
 

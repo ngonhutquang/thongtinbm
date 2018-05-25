@@ -105,7 +105,7 @@
     <script src="<?php echo public_url(); ?>templates/js/app.js" type="text/javascript"></script>
      <script src="<?php echo public_url(); ?>templates/js/validation.js" type="text/javascript"></script>
 
-     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=sd3figmzwccd44au9xpss9ms74x1g01cyhruytrxvy8jxvj9"></script>
+     <!-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=sd3figmzwccd44au9xpss9ms74x1g01cyhruytrxvy8jxvj9"></script> -->
 
 
 </head>
