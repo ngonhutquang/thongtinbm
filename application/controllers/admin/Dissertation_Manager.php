@@ -105,9 +105,9 @@ class Dissertation_Manager extends MY_Controller {
       $dissertation_id =  $this->db->insert_id();
 
       foreach ($teacher_list as $key => $teacher) {             
-        foreach ($student_list as $key => $student) {
-          $this->Teacher_Manager_Student_Model->create(array('teacher_id'=>$teacher,'student_id'=>$student,'dissertation_id'=>$dissertation_id));            
-          $this->Student_Model->update($student,array('dissertation_id'=>$dissertation_id));            
+        foreach ($student_list as $key => $student_id) {
+          $this->Teacher_Manager_Student_Model->create(array('teacher_id'=>$teacher,'student_id'=>$student_id,'dissertation_id'=>$dissertation_id));            
+          $this->Student_Model->update($student_id,array('dissertation_id'=>$dissertation_id,'dissertation_code'=>$dissertation_code));            
         }
       }
          $result = '<script> 

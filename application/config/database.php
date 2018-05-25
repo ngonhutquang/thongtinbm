@@ -80,7 +80,7 @@ $db['default'] = array(
 
 	'password' => '',
 
-	'database' => 'dieutra',
+	'database' => 'thongtinbm',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

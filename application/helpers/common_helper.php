@@ -6,12 +6,12 @@
 	 	return base_url ('public/'.$url);
 	}
 
-  
+ 
     function upload_file ($url=''){
 
     // return '/opt/lampp/htdocs/dieutra/public/Upload/'.$url;
     // return '/opt/lampp/htdocs/dieutra/public/Upload/'.$url;
-      return 'C:/xampp/htdocs/thongtinbm/public/Upload/'.$url;
+      return 'E:/xampp/htdocs/thongtinbm/public/Upload/'.$url;
 
   }
 
