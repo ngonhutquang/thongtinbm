@@ -11,7 +11,7 @@
 
     // return '/opt/lampp/htdocs/dieutra/public/Upload/'.$url;
     // return '/opt/lampp/htdocs/dieutra/public/Upload/'.$url;
-      return 'E:/xampp/htdocs/dieutra/public/Upload/'.$url;
+      return 'C:/xampp/htdocs/thongtinbm/public/Upload/'.$url;
 
   }
 

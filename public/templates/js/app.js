@@ -1,9 +1,9 @@
  $(document).ready(function() { 
 
-          // const base_url = "http://how2qa.com/admin";
+        
 
-             const base_url = "http://localhost/dieutra/admin";
-             // const base_url = "http://www.nlsearch.asia/admin";
+             const base_url = "http://localhost/thongtinbm/admin";
+            
 
 
 

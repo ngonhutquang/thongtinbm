@@ -68,15 +68,18 @@
   <div class="form-group">
     <label for="name"></span>Loại</label> 
     <select name="type" id="type">
-      <option value="1">Luận văn</option>
-      <option value="2">Tiểu luận</option>
+      
+      <?php foreach ($dissertation_type as $key => $diss_type) { ?>
+          <option  value="<?php echo $diss_type->id ?>"><?php echo $diss_type->name ?> </option>
+     <?php  } ?>
+
     </select> 
   </div>
 
          <div class="form-group">
       <label for="name"></span>Năm học</label> 
 
-          <select class="form-control" name ="course">
+          <select class="form-control" id="school_year" name ="school_year">
       <?php foreach ($school_year as $key => $value) { ?>
           <option   value="<?php echo $value->year?> "><?php echo $value->description ?></option>
       <?php } ?>

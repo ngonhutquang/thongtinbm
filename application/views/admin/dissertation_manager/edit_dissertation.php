@@ -51,22 +51,26 @@
           <div class="form-error"> <?php echo form_error('title_url')?> </div>           
         </div>
 
-
          <div class="form-group">
     <label for="name"></span>Loại</label> 
-    <select name="type" id="type">
-      <option <?php if ($variable->type == 1) echo "selected"; ?> value="1">Luan Van</option>
-      <option  <?php if ($variable->type == 2) echo "selected"; ?> value="2">Tieu luan</option>
-    </select>
- 
-  </div>
+    <select class="form-control-sm" name="type" id="type">
 
+      <?php foreach ($dissertation_type as $key => $diss_type) { ?>
+          <option <?php if($diss_type->id == $variable->type ) echo "selected"; ?> value="<?php echo $diss_type->id ?>"><?php echo $diss_type->name ?> </option>
+     <?php  } ?>
+     
+   
+     
+     
+    </select>
+    
+  </div>
           <div class="form-group">
       <label for="name"></span>Năm học</label> 
-
-          <select class="form-control" name ="course">
-      <?php foreach ($school_year as $key => $value) { ?>
-          <option  <?php if ($variable->school_year == $value->course)  echo "selected"; ?>  value="<?php echo $value->course?> "><?php echo $value->course ?></option>
+  
+     <select  id="school_year" class="form-control" name ="school_year">
+       <?php foreach ($school_years as $key => $value) { ?>
+        <option   value="<?php echo $value->year?> "><?php echo $value->description ?></option>
       <?php } ?>
     </select>
     </div>

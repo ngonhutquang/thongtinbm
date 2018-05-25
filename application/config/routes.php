@@ -80,6 +80,7 @@ $route['(home)']='Client/index';
 
 
 $route['(news)/(:any)']='Client/news/$1';
+$route['(news)']='Client/news/1';
 $route['(news)/(:any)/(:any)']='Client/get_news_detail/$3';
 
 

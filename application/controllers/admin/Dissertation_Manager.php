@@ -230,9 +230,10 @@ public function edit_dissertation (){
 
 
  $id = $this->input->post('id');
- $school_year = $this->Schoolyear_Model->get_list();
+ $school_years = $this->Schoolyear_Model->get_list();
   
   $dissertation = $this->Dissertation_Model->get_info($id);
+  $dissertation_type = $this->DissertationType_Model->get_list();
 
   $teacher_list = json_decode($dissertation->teacher);
   $student_list = json_decode($dissertation->student);
@@ -252,7 +253,7 @@ public function edit_dissertation (){
 
 
 
- $data = array ('content'=>$content,'variable'=>$dissertation,'school_year'=>$school_year,'teacher_list'=>$teacher_arr,'student_list'=>$student_arr);
+ $data = array ('content'=>$content,'variable'=>$dissertation,'school_years'=>$school_years,'teacher_list'=>$teacher_arr,'student_list'=>$student_arr,'dissertation_type'=>$dissertation_type);
 
 
 
@@ -349,13 +350,13 @@ public function delete_dissertation () {
 
 public function add_dissertation () {
     $school_year = $this->Schoolyear_Model->get_list();
-
+    $diss_type = $this->DissertationType_Model->get_list();
 
     $variables = array();       
 
     $content = "admin/dissertation_manager/add_dissertation";
 
-    $data = array ('content'=>$content,'school_year'=>$school_year);      
+    $data = array ('content'=>$content,'school_year'=>$school_year,'dissertation_type'=>$diss_type);      
 
 
     return $this->load->view ('admin/pages/index',$data);
