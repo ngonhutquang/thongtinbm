@@ -80,7 +80,7 @@ $db['default'] = array(
 
 	'password' => '',
 
-	'database' => 'thongtinbm',
+	'database' => 'tl_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
