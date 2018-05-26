@@ -25,8 +25,6 @@ class Teacher extends MY_Controller {
     $list_dissertation = null;
 
 
-
-
     $qr = "SELECT * FROM  teacher_manager_student WHERE teacher_id = $teacher_id GROUP BY dissertation_id ";
     $query = $this->db->query($qr);
 
@@ -36,31 +34,18 @@ class Teacher extends MY_Controller {
        
     }
 
-
-
-
-    // $list_diss = $this->db->select('dissertation_id')->group_by('teacher_id')->get('teacher_manager_student');
-
-    // pre ($list_diss);
-
-
+    
    foreach ($dissertation_arr as $key => $value) {
             $list_dissertation[] = $this->Dissertation_Model->get_info($value->dissertation_id);
 
    }
-
- 
-
-
-
-
-
-
-
        
     $content = "teacher/teacher";   
 
-    $data = array ('content'=>$content,'teacher'=>$teacher,'dissertation'=>$list_dissertation);     
+    $data = array ('content'=>$content,'teacher'=>$teacher,'dissertation'=>$list_dissertation); 
+
+
+    // pre ($data);    
 
     $this->load->view ('admin/pages/index',$data);
 
